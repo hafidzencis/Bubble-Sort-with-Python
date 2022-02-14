@@ -8,8 +8,8 @@ data_list = data_excel.values.tolist() #mengubah data_excel ke bentuk list
 while True: #perulangan digunakan untuk membuat program
     print("=====Program melakukan sorting dari tempat pertandingan dan jadwal pertandingan=====")
     print("Masukkan angka 1 untuk melakukan program sorting tempat")
-    print("Masukkan angka 2 untuk melakukan program sorting jadwal pertandingan secara ascending")
-    print("Masukkan angka 3 untuk melakukan program sorting jadwal pertandingan secara descending")
+    print("Masukkan angka 2 untuk melakukan program sorting jadwal pertandingan secara descending")
+    print("Masukkan angka 3 untuk melakukan program sorting jadwal pertandingan secara ascending")
     print("Masukkan angka 4 memberhentikan program\n")
     masuk = int(input("Masukkan angka : ")) # digunakan untuk inputan user
 
@@ -42,7 +42,7 @@ while True: #perulangan digunakan untuk membuat program
         print(tabelPD)
         print("\n")
 
-    if masuk == 2:
+    if masuk == 3:
         def urut_depan(daftar): #melakukan sorting bubble pada jadwal secara ascending
             n = len(daftar)
             for i in range (n):
@@ -57,7 +57,7 @@ while True: #perulangan digunakan untuk membuat program
         print(tabelPD)
         print("\n")
     
-    if masuk == 3 :
+    if masuk == 2 :
         def urut_belakang(daftar): #melakukan sorting bubble pada jadwal secara descending
             n = len(daftar)
             for i in range (n):
