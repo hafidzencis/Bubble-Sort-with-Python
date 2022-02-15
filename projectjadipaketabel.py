@@ -37,7 +37,7 @@ while True: #perulangan digunakan untuk membuat program
                     if daftar[j].tempat > daftar[j+1].tempat :
                         daftar[j], daftar[j+1] = daftar[j+1], daftar[j]
 
-
+        print("salah tadi")
         urut_tempat(daftarpd)
         for i in daftarpd:
             tabelPD.add_row([i.negara,i.tempat,i.jadwal])
