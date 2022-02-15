@@ -7,12 +7,12 @@ data_list = data_excel.values.tolist() #mengubah data_excel ke bentuk list
 
 while True: #perulangan digunakan untuk membuat program
     print("=====Program melakukan sorting dari tempat pertandingan dan jadwal pertandingan=====")
-
     print("Masukkan angka 1 untuk melakukan program sorting tempat pertandingan secara ascending")
     print("Masukkan angka 2 untuk melakukan program sorting tempat pertandingan secara descending")
     print("Masukkan angka 3 untuk melakukan program sorting jadwal pertandingan secara descending")
     print("Masukkan angka 4 untuk melakukan program sorting jadwal pertandingan secara ascending")
-    print("Masukkan angka 5 memberhentikan program\n")
+    print("Masukkan angka 5 untuk melakukan program sorting pertandingan antara negara secara ascending")
+    print("Masukkan angka 6 memberhentikan program\n")
     masuk = int(input("Masukkan angka : ")) # digunakan untuk inputan user
 
     class pialadunia: #kelas piala dunia ini digunakan untuk memecah data 
@@ -59,8 +59,6 @@ while True: #perulangan digunakan untuk membuat program
         print(tabelPD)
         print("\n")
 
-   
-    print("Feature A")
     if masuk == 3 :
         def urut_belakang(daftar): #melakukan sorting bubble pada jadwal secara descending
             n = len(daftar)
@@ -69,7 +67,6 @@ while True: #perulangan digunakan untuk membuat program
                     if daftar[j].jadwal < daftar[j+1].jadwal :
                         daftar[j], daftar[j+1] = daftar[j+1], daftar[j]
 
-    
         urut_belakang(daftarpd)
         for i in daftarpd:
             tabelPD.add_row([i.negara,i.tempat,i.jadwal])
@@ -86,11 +83,24 @@ while True: #perulangan digunakan untuk membuat program
                         daftar[j], daftar[j+1] = daftar[j+1], daftar[j]
 
         urut_depan(daftarpd)
-
         for i in daftarpd:
             tabelPD.add_row([i.negara,i.tempat,i.jadwal])
         print(tabelPD)
         print("\n")
 
-    if masuk == 5 : #memberhentikan program
+    if masuk == 5:
+        def urut_pert(daftar): #melakukan sorting bubble pada jadwal secara ascending
+            n = len(daftar)
+            for i in range (n):
+                for j in range(0,n-i-1):
+                    if daftar[j].negara > daftar[j+1].negara :
+                        daftar[j], daftar[j+1] = daftar[j+1], daftar[j]
+
+        urut_pert(daftarpd)
+        for i in daftarpd:
+            tabelPD.add_row([i.negara,i.tempat,i.jadwal])
+        print(tabelPD)
+        print("\n")
+
+    if masuk == 6 : #memberhentikan program
         break
