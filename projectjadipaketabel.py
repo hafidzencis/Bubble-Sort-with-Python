@@ -37,7 +37,7 @@ while True: #perulangan digunakan untuk membuat program
                     if daftar[j].tempat > daftar[j+1].tempat :
                         daftar[j], daftar[j+1] = daftar[j+1], daftar[j]
 
-        print("salah tadi")
+        print("FeatureA mencoba featuerA merge no FF")
         urut_tempat(daftarpd)
         for i in daftarpd:
             tabelPD.add_row([i.negara,i.tempat,i.jadwal])
@@ -60,7 +60,7 @@ while True: #perulangan digunakan untuk membuat program
         print("\n")
 
    
-    
+    print("Feature A")
     if masuk == 3 :
         def urut_belakang(daftar): #melakukan sorting bubble pada jadwal secara descending
             n = len(daftar)
